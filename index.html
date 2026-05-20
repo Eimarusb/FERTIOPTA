@@ -8,503 +8,255 @@
 
   <title>FERTIOPTA</title>
 
-  <!-- FUENTES -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- FUENTE TITULOS -->
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- FUENTE TEXTO -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body{
-
-      font-family:'Open Sans', sans-serif;
-
-      background:
-      linear-gradient(
-      135deg,
-      #ECEFF1,
-      #DDE7E1
-      );
-
-      color:#263238;
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #ECEFF1, #DDE7E1);
+      color: #263238;
     }
 
     /* ================================================= */
     /* BARRA DE NAVEGACION */
     /* ================================================= */
 
-    nav{
-
-      display:flex;
-
-      justify-content:center;
-
-      flex-wrap:wrap;
-
-      gap:10px;
-
-      background:#263238;
-
-      padding:18px;
-
-      position:sticky;
-
-      top:0;
-
-      z-index:1000;
-
-      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: #263238;
+      padding: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    nav button{
-
-      background:transparent;
-
-      border:2px solid transparent;
-
-      color:#ECEFF1;
-
-      padding:12px 18px;
-
-      border-radius:10px;
-
-      font-family:'Rajdhani', sans-serif;
-
-      font-size:1rem;
-
-      letter-spacing:1px;
-
-      cursor:pointer;
-
-      transition:0.3s;
+    nav button {
+      background: transparent;
+      border: 2px solid transparent;
+      color: #ECEFF1;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    /* Resaltado del botón activo */
-    nav button.active{
-      background:#2E7D32;
-      border-color:#81C784;
-      box-shadow:0 0 12px rgba(46,125,50,0.4);
+    nav button.active {
+      background: #2E7D32;
+      border-color: #81C784;
+      box-shadow: 0 0 12px rgba(46, 125, 50, 0.4);
     }
 
-    nav button:hover{
-
-      background:#2E7D32;
-
-      border-color:#81C784;
-
-      transform:translateY(-2px);
-
-      box-shadow:0 0 12px rgba(46,125,50,0.4);
+    nav button:hover {
+      background: #2E7D32;
+      border-color: #81C784;
+      transform: translateY(-2px);
+      box-shadow: 0 0 12px rgba(46, 125, 50, 0.4);
     }
 
     /* ================================================= */
     /* CONTENIDO */
     /* ================================================= */
 
-    .tab-content{
-
-      display:none;
-
-      padding:50px;
-
-      animation:fadeIn 0.6s ease;
+    .tab-content {
+      display: none;
+      padding: 50px;
+      animation: fadeIn 0.6s ease;
     }
 
-    .tab-content.active{
-
-      display:block;
-
-      max-width:1200px;
-
-      margin:35px auto;
-      
-      min-height: 60vh; 
+    .tab-content.active {
+      display: block;
+      max-width: 1200px;
+      margin: 35px auto;
+      min-height: 60vh;
     }
 
     /* ================================================= */
-    /* TITULOS */
+    /* TITULOS Y LOGOS */
     /* ================================================= */
 
-    h1{
-
-      font-family:'Rajdhani', sans-serif;
-
-      color:#2E7D32;
-
-      font-size:4rem;
-
-      margin-bottom:20px;
+    h1 {
+      font-family: 'Rajdhani', sans-serif;
+      color: #2E7D32;
+      font-size: 4rem;
+      margin-bottom: 20px;
     }
 
-    h2{
-
-      font-family:'Rajdhani', sans-serif;
-
-      color:#2E7D32;
-
-      font-size:2.4rem;
-
-      border-left:6px solid #8D6E63;
-
-      padding-left:15px;
-
-      margin-bottom:25px;
+    .logo-principal {
+      max-width: 250px;
+      height: auto;
+      margin-bottom: 15px;
+      display: block;
     }
 
-    h3{
-
-      font-family:'Rajdhani', sans-serif;
+    h2 {
+      font-family: 'Rajdhani', sans-serif;
+      color: #2E7D32;
+      font-size: 2.4rem;
+      border-left: 6px solid #8D6E63;
+      padding-left: 15px;
+      margin-bottom: 25px;
     }
 
-    p{
-
-      line-height:1.9;
-
-      font-size:1.05rem;
+    h3 {
+      font-family: 'Rajdhani', sans-serif;
     }
 
-    /* ================================================= */
-    /* BLOQUES */
-    /* ================================================= */
+    p {
+      line-height: 1.9;
+      font-size: 1.05rem;
+    }
 
-    .bloque{
-
-      background:white;
-
-      padding:35px;
-
-      border-radius:20px;
-
-      margin-bottom:40px;
-
-      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    .bloque {
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     /* ================================================= */
-    /* GRID DE OBJETIVOS ORIGINAL Y COMUN */
+    /* GRIDS */
     /* ================================================= */
 
-    .objetivos-grid{
-
-      display:grid;
-
-      grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
-
-      gap:25px;
-
-      margin-top:35px;
-    }
-
-    /* ================================================= */
-    /* NUEVO MAQUETADO NUEVO ESTRUCTURA 2X2 PARA RIEGOS */
-    /* ================================================= */
-
-    .grid-2x2 {
+    .objetivos-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Fuerza estrictamente 2 columnas */
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 25px;
       margin-top: 35px;
     }
 
-    .objetivo-card{
-
-      background:white;
-
-      border-top:6px solid #2E7D32;
-
-      border-radius:18px;
-
-      padding:28px;
-
-      box-shadow:0 8px 18px rgba(0,0,0,0.12);
-
-      transition:0.35s;
-
-      position:relative;
-
-      overflow:hidden;
+    .modos-grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 35px;
+      margin-bottom: 40px;
     }
 
-    .objetivo-card:hover{
-
-      transform:translateY(-10px) scale(1.02);
-
-      box-shadow:0 16px 30px rgba(0,0,0,0.2);
-
-      background:#F1F8E9;
+    @media(max-width: 768px) {
+      .modos-grid-2x2 { grid-template-columns: 1fr; }
+      .tab-content { padding: 25px; }
+      h1 { font-size: 2.8rem; }
     }
 
-    .objetivo-card::before{
-
-      content:"";
-
-      position:absolute;
-
-      top:0;
-      left:-100%;
-
-      width:100%;
-      height:100%;
-
-      background:linear-gradient(
-      120deg,
-      transparent,
-      rgba(255,255,255,0.4),
-      transparent
-      );
-
-      transition:0.6s;
+    .objetivo-card {
+      background: white;
+      border-top: 6px solid #2E7D32;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+      transition: 0.35s;
+      position: relative;
+      overflow: hidden;
     }
 
-    .objetivo-card:hover::before{
-
-      left:100%;
+    .objetivo-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      background: #F1F8E9;
     }
 
-    .objetivo-icono{
-
-      font-size:2.8rem;
-
-      margin-bottom:15px;
-    }
-
-    .objetivo-card h3{
-
-      color:#2E7D32;
-
-      margin-bottom:12px;
-
-      font-size:1.5rem;
-    }
-
-    /* Botón específico para las descargas de Drive en el Repositorio */
+    /* Botones Drive */
     .btn-drive {
       background: #263238;
-      border: 2px solid transparent;
       color: #ECEFF1;
       padding: 12px;
       width: 100%;
       border-radius: 10px;
       font-family: 'Rajdhani', sans-serif;
-      font-size: 1rem;
       font-weight: bold;
-      letter-spacing: 1px;
       cursor: pointer;
       transition: 0.3s;
       margin-top: 15px;
+      border: none;
     }
 
-    .btn-drive:hover {
-      background: #2E7D32;
-      border-color: #81C784;
-      box-shadow: 0 4px 12px rgba(46,125,50,0.3);
-    }
+    .btn-drive:hover { background: #2E7D32; }
 
     /* ================================================= */
-    /* COMPONENTES */
+    /* COMPONENTES E IMÁGENES */
     /* ================================================= */
 
-    .cards-container{
-
-      display:grid;
-
-      grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
-
-      gap:25px;
-
-      margin-top:35px;
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
     }
 
-    .card-objetivo{
-
-      background:white;
-
-      padding:30px;
-
-      border-radius:18px;
-
-      text-align:center;
-
-      transition:0.3s;
-
-      box-shadow:0 8px 18px rgba(0,0,0,0.12);
-
-      border-top:6px solid #2E7D32;
+    .card-objetivo {
+      background: white;
+      padding: 20px;
+      border-radius: 18px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+      border-top: 6px solid #2E7D32;
     }
 
-    .card-objetivo:hover{
-
-      transform:translateY(-8px);
-
-      box-shadow:0 14px 28px rgba(0,0,0,0.18);
+    .imagen-componente {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      background-color: #ECEFF1;
     }
 
-    .icono{
-
-      font-size:3rem;
-
-      margin-bottom:20px;
+    .gif-contenedor {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #ECEFF1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .card-objetivo h3{
+    .gif-contenedor img { width: 100%; height: 100%; object-fit: contain; }
 
-      color:#2E7D32;
-
-      margin-bottom:15px;
-
-      font-size:1.5rem;
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 18px;
     }
 
-    /* ================================================= */
-    /* VIDEO */
-    /* ================================================= */
-
-    .imagen{
-
-      margin-top:40px;
-    }
-
-    iframe{
-
-      border-radius:18px;
-
-      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    .video-container iframe {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
     }
 
     /* ================================================= */
     /* TABLAS */
     /* ================================================= */
 
-    table{
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 45px; }
+    th { background: #2E7D32; color: white; padding: 14px; font-family: 'Rajdhani', sans-serif; }
+    td { padding: 12px; text-align: center; border: 1px solid #B0BEC5; }
 
-      width:100%;
-
-      border-collapse:collapse;
-
-      margin-top:30px;
-    }
-
-    table, th, td{
-
-      border:1px solid #B0BEC5;
-    }
-
-    th{
-
-      background:#2E7D32;
-
-      color:white;
-
-      padding:14px;
-
-      font-family:'Rajdhani', sans-serif;
-
-      letter-spacing:1px;
-    }
-
-    td{
-
-      padding:12px;
-
-      text-align:center;
-    }
-
-    tr:hover{
-
-      background:#F1F8E9;
-    }
-
-    /* ================================================= */
-    /* DETAILS */
-    /* ================================================= */
-
-    details{
-
-      background:white;
-
-      padding:25px;
-
-      border-radius:18px;
-
-      margin-top:20px;
-
-      box-shadow:0 6px 14px rgba(0,0,0,0.1);
-
-      border-left:6px solid #2E7D32;
-    }
-
-    summary{
-
-      cursor:pointer;
-
-      font-family:'Rajdhani', sans-serif;
-
-      color:#2E7D32;
-
-      font-size:1.4rem;
-
-      font-weight:bold;
-    }
-
-    /* ================================================= */
-    /* ANIMACION */
-    /* ================================================= */
-
-    @keyframes fadeIn{
-
-      from{
-
-        opacity:0;
-
-        transform:translateY(20px);
-      }
-
-      to{
-
-        opacity:1;
-
-        transform:translateY(0);
-      }
-    }
-
-    /* ================================================= */
-    /* RESPONSIVE */
-    /* ================================================= */
-
-    @media(max-width:768px){
-
-      .tab-content{
-
-        padding:25px;
-      }
-
-      h1{
-
-        font-size:2.8rem;
-      }
-
-      h2{
-
-        font-size:1.8rem;
-      }
-
-      /* En móviles se rompe el 2x2 para apilarse verticalmente de forma cómoda */
-      .grid-2x2 {
-        grid-template-columns: 1fr;
-      }
-    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
   </style>
 
@@ -512,497 +264,168 @@
 
 <body>
 
-  <!-- ================================================= -->
-  <!-- NAV -->
-  <!-- ================================================= -->
-
   <nav>
-
-    <button class="active" onclick="openTab(event, 'contexto')">
-      Contexto y Objetivos
-    </button>
-
-    <button onclick="openTab(event, 'repositorio')">
-      Repositorio
-    </button>
-
-    <button onclick="openTab(event, 'semestres')">
-      Semestres
-    </button>
-
-    <button onclick="openTab(event, 'speech')">
-      Funcionamiento Teórico
-    </button>
-
+    <button class="active" onclick="openTab(event, 'contexto')">Contexto y Objetivos</button>
+    <button onclick="openTab(event, 'repositorio')">Repositorio</button>
+    <button onclick="openTab(event, 'semestres')">Semestres</button>
+    <button onclick="openTab(event, 'speech')">Funcionamiento Teórico</button>
   </nav>
-
-  <!-- ================================================= -->
-  <!-- CONTEXTO -->
-  <!-- ================================================= -->
 
   <div id="contexto" class="tab-content active">
 
     <div class="bloque">
-
+      <img src="imagenes/FERTILOGO.jpg" alt="Logo FERTIOPTA" class="logo-principal">
+      
       <h1>FERTIOPTA</h1>
 
       <p>
-        FERTIOPTA es un sistema automatizado de fertirriego
-        orientado al cultivo de papa, diseñado para optimizar
-        el suministro de agua y nutrientes mediante procesos
-        de automatización y control hidráulico.
+        FERTIOPTA es un sistema automatizado de fertirriego orientado al cultivo de papa, diseñado para optimizar el suministro de agua y nutrientes mediante procesos de automatización y control hidráulico.
       </p>
-
-      <br>
-
-      <p>
-        El proyecto busca mejorar la eficiencia del riego,
-        reducir desperdicios de agua y facilitar la integración
-        de tecnologías aplicadas al sector agrícola.
-      </p>
-
-      <!-- OBJETIVOS EN FICHAS -->
 
       <div class="objetivos-grid">
-
         <div class="objetivo-card">
-
           <div class="objetivo-icono">🎯</div>
-
           <h3>Objetivo Principal</h3>
-
-          <p>
-            Desarrollar un sistema automatizado
-            de fertirriego para optimizar el cultivo de papa.
-          </p>
-
+          <p>Desarrollar un sistema automatizado de fertirriego para optimizar el cultivo de papa.</p>
         </div>
-
         <div class="objetivo-card">
-
           <div class="objetivo-icono">⚙️</div>
-
           <h3>Operación Automática</h3>
-
-          <p>
-            Implementar modos automáticos
-            de operación hidráulica.
-          </p>
-
+          <p>Implementar modos automáticos de operación hidráulica.</p>
         </div>
-
         <div class="objetivo-card">
-
           <div class="objetivo-icono">🛢️</div>
-
           <h3>Control del Sistema</h3>
-
-          <p>
-            Automatizar el control del tanque
-            y las cargas del sistema.
-          </p>
-
+          <p>Automatizar el control del tanque y las cargas del sistema.</p>
         </div>
-
         <div class="objetivo-card">
-
           <div class="objetivo-icono">💧</div>
-
           <h3>Eficiencia Hídrica</h3>
-
-          <p>
-            Optimizar el aprovechamiento
-            del agua y nutrientes.
-          </p>
-
+          <p>Optimizar el aprovechamiento del agua y nutrientes.</p>
         </div>
-
       </div>
 
-      <!-- VIDEO YOUTUBE -->
-
-      <div class="imagen">
-
-        <iframe
-          width="100%"
-          height="420"
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          title="Video del proyecto"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-
+      <div style="margin-top:40px;">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/_Aeu-2KAmzM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
-
     </div>
 
-    <!-- COMPONENTES -->
-
     <div class="bloque">
-
       <h2>Componentes del Sistema</h2>
 
-      <p>
-        El sistema FERTIOPTA está compuesto por elementos
-        encargados de controlar, transportar y distribuir
-        agua y nutrientes durante la operación automática.
-      </p>
-
       <div class="cards-container">
-
         <div class="card-objetivo">
-
-          <div class="icono">🧠</div>
-
+          <img src="imagenes/OPTA.jpg" alt="Arduino OPTA" class="imagen-componente">
           <h3>Arduino OPTA</h3>
-
-          <p>
-            El cerebro del sistema.
-            Ejuta la lógica de control
-            y coordina todos los procesos.
-          </p>
-
+          <p>El cerebro del sistema. Ejecuta la lógica de control y coordina los procesos.</p>
         </div>
 
         <div class="card-objetivo">
-
-          <div class="icono">💧</div>
-
+          <img src="imagenes/CONTEXTOBOMBA.jpg" alt="Electrobomba" class="imagen-componente">
           <h3>Electrobomba</h3>
-
-          <p>
-            El corazón del sistema.
-            Genera el flujo hidráulico
-            necesario para operar.
-          </p>
-
+          <p>Genera el flujo hidráulico necesario para operar.</p>
         </div>
 
         <div class="card-objetivo">
-
-          <div class="icono">⚙️</div>
-
+          <img src="imagenes/CONTEXTOELECTROVALVULAS.jpg" alt="Electroválvulas" class="imagen-componente">
           <h3>Electroválvulas</h3>
-
-          <p>
-            Las manos del sistema.
-            Controlan automáticamente
-            el paso del agua.
-          </p>
-
+          <p>Controlan automáticamente el paso del agua.</p>
         </div>
 
         <div class="card-objetivo">
-
-          <div class="icono">🛢️</div>
-
+          <img src="imagenes/CONTEXTOTANQUE.jpg" alt="Tanque" class="imagen-componente">
           <h3>Tanque</h3>
-
-          <p>
-            El centro de almacenamiento
-            de agua para la operación.
-          </p>
-
+          <p>Almacenamiento de agua para la operación.</p>
         </div>
 
         <div class="card-objetivo">
-
-          <div class="icono">🔩</div>
-
-          <h3>Tuberías y Mangueras</h3>
-
-          <p>
-            Las rutas hidráulicas del sistema
-            para transportar agua y nutrientes.
-          </p>
-
+          <img src="imagenes/CONTEXTOTUBERIA.jpg" alt="Tuberías" class="imagen-componente">
+          <h3>Tuberías</h3>
+          <p>Rutas hidráulicas para transportar agua y nutrientes.</p>
         </div>
-
       </div>
-
     </div>
 
   </div>
-
-  <!-- ================================================= -->
-  <!-- REPOSITORIO -->
-  <!-- ================================================= -->
 
   <div id="repositorio" class="tab-content">
-
     <div class="bloque">
-
       <h2>Repositorio del Proyecto</h2>
-
-      <p>
-        En esta sección se encuentran centralizados los recursos técnicos esenciales 
-        para la implementación, mantenimiento y réplica del sistema FERTIOPTA.
-      </p>
-
       <div class="objetivos-grid">
-
-        <!-- FICHA: PLANOS ELÉCTRICOS -->
-        <div class="objetivo-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div class="objetivo-icono">⚡</div>
-            <h3>Planos Eléctricos</h3>
-            <p>
-              Diagramas de conexiones y cableado del sistema. Incluye la distribución de 
-              alimentación para el Arduino OPTA, el acoplamiento de relés para la electrobomba 
-              y las señales de control hacia las electroválvulas.
-            </p>
-          </div>
-          <a href="TU_ENLACE_DE_DRIVE_AQUÍ" target="_blank" style="text-decoration: none;">
-            <button type="button" class="btn-drive">
-              📂 Ver Planos en Google Drive
-            </button>
-          </a>
+        <div class="objetivo-card">
+          <h3>Planos Eléctricos</h3>
+          <a href="https://drive.google.com/file/d/1nd_GVG0D6KwTs0JJtm1LScOXxmLkj7YC/view?usp=drive_link" target="_blank"><button class="btn-drive">📂 PLANO CONEXIONES OPTA</button></a>
+          <a href="https://drive.google.com/file/d/1BfRAG2VCvmIoCydJ0B-ZGz5BEYQHFr8z/view?usp=drive_link" target="_blank"><button class="btn-drive">📂 PLANO P&ID</button></a>
         </div>
-
-        <!-- FICHA: CÓDIGO DE PROGRAMACIÓN -->
-        <div class="objetivo-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div class="objetivo-icono">💻</div>
-            <h3>Código de Programación</h3>
-            <p>
-              Lógica de control y automatización desarrollada en la plataforma. Contiene la 
-              rutina de conmutación para los modos de operación (Riego normal, Fertirriego, 
-              Oxigenación y Llenado prioritario).
-            </p>
-          </div>
-          <a href="TU_ENLACE_DE_DRIVE_AQUÍ" target="_blank" style="text-decoration: none;">
-            <button type="button" class="btn-drive">
-              📂 Ver Código en Google Drive
-            </button>
-          </a>
+        <div class="objetivo-card">
+          <h3>Código</h3>
+          <a href="https://docs.google.com/document/d/1vkSWPjEsLRnksdBlvWWDQMIXnjyh2FUQ/edit" target="_blank"><button class="btn-drive">📂 CÓDIGO GOOGLE DRIVE</button></a>
         </div>
-
       </div>
-
     </div>
-
   </div>
-
-  <!-- ================================================= -->
-  <!-- SEMESTRES -->
-  <!-- ================================================= -->
 
   <div id="semestres" class="tab-content">
-
     <div class="bloque">
-
-      <h2>Desarrollo por Semestres</h2>
-
-      <details>
-
-        <summary>Semestre 4</summary>
-
-        <p>
-          Introducción al proyecto y diseños conceptuales.
-        </p>
-
-      </details>
-
-      <details>
-
-        <summary>Semestre 5</summary>
-
-        <p>
-          Desarrollo de automatización y pruebas.
-        </p>
-
-      </details>
-
-      <details>
-
-        <summary>Semestre 6</summary>
-
-        <p>
-          Optimización y documentación técnica final.
-        </p>
-
-      </details>
-
+      <h2>Desarrollo</h2>
+      <p>Contenido de semestres aquí...</p>
     </div>
-
   </div>
-
-  <!-- ================================================= -->
-  <!-- FUNCIONAMIENTO (CAMBIADO A CONTENEDOR GRID 2X2) -->
-  <!-- ================================================= -->
 
   <div id="speech" class="tab-content">
-
     <div class="bloque">
-
-      <h2>Funcionamiento Teórico</h2>
-      
-      <p>
-        El sistema FERTIOPTA basa su lógica en una máquina de estados controlada por un autómata programable. 
-        A través del procesamiento de señales procedentes de la matriz de sensores, el controlador discrimina de 
-        manera automática el escenario óptimo de trabajo. La conmutación entre los diferentes modos operativos 
-        garantiza tanto el cuidado metabólico del cultivo de papa como la integridad electromecánica de la planta hidráulica.
-      </p>
-
-      <!-- Aquí se aplica la clase .grid-2x2 para ordenar las fichas de los modos de riego -->
-      <div class="grid-2x2">
-
+      <h2>Modos de Operación</h2>
+      <div class="modos-grid-2x2">
         <div class="objetivo-card">
-          <div class="objetivo-icono">🌱</div>
-          <h3>Riego Normal</h3>
-          <p>
-            Modo base del sistema. Activa la electrobomba de acoplamiento y abre la electroválvula de salida 
-            para transportar agua limpia de manera directa a los canales de distribución, hidratando el cultivo de 
-            forma convencional.
-          </p>
-        </div>
-
-        <div class="objetivo-card">
-          <div class="objetivo-icono">🧪</div>
-          <h3>Fertirriego</h3>
-          <p>
-            Etapa de nutrición asistida. Durante esta fase, el sistema dosifica compuestos químicos disueltos 
-            y los inyecta dinámicamente en el flujo de salida, permitiendo que la planta absorba agua y macroelementos 
-            de forma simultánea.
-          </p>
-        </div>
-
-        <div class="objetivo-card">
-          <div class="objetivo-icono">🌀</div>
+          <div class="gif-contenedor"><img src="imagenes/OXIGIF.gif"></div>
           <h3>Oxigenación</h3>
-          <p>
-            Rutina de mantenimiento cíclico. Para evitar la sedimentación de nutrientes y la proliferación anaeróbica, 
-            el controlador desvía el caudal a través de la electroválvula de oxigenación, provocando una recirculación interna 
-            cerrada dentro del tanque principal.
-          </p>
         </div>
-
         <div class="objetivo-card">
-          <div class="objetivo-icono">🚨</div>
-          <h3>Llenado Prioritario</h3>
-          <p>
-            Algoritmo de protección crítica. Si los sensores detectan un nivel de fluido inferior al umbral mínimo, 
-            el sistema interrumpe cualquier proceso en curso para abrir la electroválvula de llenado, reabasteciendo el 
-            tanque y previniendo la cavitación o marcha en seco de la bomba.
-          </p>
+          <div class="gif-contenedor"><img src="imagenes/RIGGIF.gif"></div>
+          <h3>Riego Regular</h3>
         </div>
-
+        <div class="objetivo-card">
+          <div class="gif-contenedor"><img src="imagenes/FERTIGIF.gif"></div>
+          <h3>Fertirriego</h3>
+        </div>
+        <div class="objetivo-card">
+          <div class="gif-contenedor"><img src="imagenes/LLNGIF.gif"></div>
+          <h3>Llenado Automático</h3>
+        </div>
       </div>
 
-      <br><br>
-      <h2>Matriz de Activación de Actuadores</h2>
-      <p>
-        La siguiente tabla lógica representa la matriz binaria de control programada en el PLC. Muestra el estado 
-        esperado de cada salida digital (1: Activo, 0: Inactivo) según el modo seleccionado por el algoritmo principal:
-      </p>
-
+      <h2>Tabla de Electroválvulas</h2>
       <table>
-
-        <tr>
-
-          <th>MODO</th>
-
-          <th>EV LLENADO</th>
-
-          <th>EV OXIGENACIÓN</th>
-
-          <th>EV SALIDA</th>
-
-          <th>BOMBA</th>
-
-        </tr>
-
-        <tr>
-
-          <td>Riego normal</td>
-
-          <td>0</td>
-
-          <td>0</td>
-
-          <td>1</td>
-
-          <td>1</td>
-
-        </tr>
-
-        <tr>
-
-          <td>Fertirriego</td>
-
-          <td>0</td>
-
-          <td>0</td>
-
-          <td>1</td>
-
-          <td>1</td>
-
-        </tr>
-
-        <tr>
-
-          <td>Oxigenación</td>
-
-          <td>0</td>
-
-          <td>1</td>
-
-          <td>0</td>
-
-          <td>1</td>
-
-        </tr>
-
-        <tr>
-
-          <td>Llenado prioritario</td>
-
-          <td>1</td>
-
-          <td>0</td>
-
-          <td>0</td>
-
-          <td>1</td>
-
-        </tr>
-
+        <tr><th>MODO</th><th>EV LLENADO</th><th>EV OXIGENACION</th><th>EV SALIDA</th></tr>
+        <tr><td>OXIGENACION</td><td>0</td><td>1</td><td>0</td></tr>
+        <tr><td>RIEGO REGULAR</td><td>1</td><td>0</td><td>1</td></tr>
+        <tr><td>FERTIRRIEGO</td><td>0</td><td>0</td><td>1</td></tr>
+        <tr><td>LLENADO AUTOMATICO</td><td>1</td><td>1</td><td>0</td></tr>
       </table>
 
+      <h2>Tabla de Bomba</h2>
+      <table>
+        <tr><th rowspan="2">TRABAJO</th><th colspan="2">FUNCIONA</th></tr>
+        <tr><th>SI</th><th>NO</th></tr>
+        <tr><td>NIVEL ALTO</td><td>X</td><td></td></tr>
+        <tr><td>NIVEL BAJO</td><td></td><td>X</td></tr>
+        <tr><td>RIEGO NORMAL OPERANDO</td><td></td><td>X</td></tr>
+      </table>
     </div>
-
   </div>
 
-  <!-- ================================================= -->
-  <!-- SCRIPT -->
-  <!-- ================================================= -->
-
   <script>
-
-    function openTab(evt, tabId){
-
-      // Ocultar todas las pestañas
+    function openTab(evt, tabId) {
       const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => {
-        tab.classList.remove('active');
-      });
-
-      // Quitar el color verde a todos los botones del menú
+      tabs.forEach(tab => tab.classList.remove('active'));
       const buttons = document.querySelectorAll('nav button');
-      buttons.forEach(btn => {
-        btn.classList.remove('active');
-      });
-
-      // Mostrar la pestaña seleccionada
+      buttons.forEach(btn => btn.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
-      
-      // Agregar la clase active al botón actual que fue presionado
       evt.currentTarget.classList.add('active');
     }
-
   </script>
 
 </body>
-
 </html>
