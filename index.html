@@ -12,7 +12,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
@@ -223,7 +222,7 @@
 
     .gif-contenedor {
       width: 100%;
-      height: 300px;
+      height: 220px;
       margin-bottom: 15px;
       border-radius: 12px;
       overflow: hidden;
@@ -233,7 +232,74 @@
       align-items: center;
     }
 
-    .gif-contenedor img { width: 100%; height: 100%; object-fit: contain; }
+    .gif-contenedor img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+    }
+
+    /* ================================================= */
+    /* ESTILOS ESPECÍFICOS PARA LA BANDEJA DE SEMESTRES */
+    /* ================================================= */
+    
+    .semestres-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 35px;
+    }
+
+    .bandeja-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      border-top: 6px solid #2E7D32;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.3s;
+    }
+
+    .bandeja-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    }
+
+    .bandeja-card.proximamente {
+      border-top-color: #B0BEC5;
+      background: #F9FBF9;
+      opacity: 0.85;
+    }
+
+    .bandeja-card h3 {
+      font-size: 1.8rem;
+      color: #263238;
+      margin-bottom: 10px;
+    }
+
+    .bandeja-card.proximamente h3 {
+      color: #78909C;
+    }
+
+    .bandeja-card p {
+      font-size: 1rem;
+      color: #546E7A;
+      margin-bottom: 25px;
+    }
+
+    .tag-proximamente {
+      display: inline-block;
+      background: #ECEFF1;
+      color: #78909C;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-top: 15px;
+    }
 
     .video-container {
       position: relative;
@@ -272,15 +338,10 @@
   </nav>
 
   <div id="contexto" class="tab-content active">
-
     <div class="bloque">
       <img src="imagenes/FERTILOGO.jpg" alt="Logo FERTIOPTA" class="logo-principal">
-      
       <h1>FERTIOPTA</h1>
-
-      <p>
-        FERTIOPTA es un sistema automatizado de fertirriego orientado al cultivo de papa, diseñado para optimizar el suministro de agua y nutrientes mediante procesos de automatización y control hidráulico.
-      </p>
+      <p>FERTIOPTA es un sistema automatizado de fertirriego orientado al cultivo de papa, diseñado para optimizar el suministro de agua y nutrientes mediante procesos de automatización y control hidráulico.</p>
 
       <div class="objetivos-grid">
         <div class="objetivo-card">
@@ -314,40 +375,34 @@
 
     <div class="bloque">
       <h2>Componentes del Sistema</h2>
-
       <div class="cards-container">
         <div class="card-objetivo">
           <img src="imagenes/OPTA.jpg" alt="Arduino OPTA" class="imagen-componente">
           <h3>Arduino OPTA</h3>
-          <p>El cerebro del sistema. Ejecuta la lógica de control y coordina los procesos.</p>
+          <p>El cerebro del sistema. Ejecuta la lógica de control.</p>
         </div>
-
         <div class="card-objetivo">
           <img src="imagenes/CONTEXTOBOMBA.jpg" alt="Electrobomba" class="imagen-componente">
           <h3>Electrobomba</h3>
-          <p>Genera el flujo hidráulico necesario para operar.</p>
+          <p>Genera el flujo hidráulico necesario.</p>
         </div>
-
         <div class="card-objetivo">
           <img src="imagenes/CONTEXTOELECTROVALVULAS.jpg" alt="Electroválvulas" class="imagen-componente">
           <h3>Electroválvulas</h3>
           <p>Controlan automáticamente el paso del agua.</p>
         </div>
-
         <div class="card-objetivo">
           <img src="imagenes/CONTEXTOTANQUE.jpg" alt="Tanque" class="imagen-componente">
           <h3>Tanque</h3>
-          <p>Almacenamiento de agua para la operación.</p>
+          <p>Almacenamiento de agua.</p>
         </div>
-
         <div class="card-objetivo">
           <img src="imagenes/CONTEXTOTUBERIA.jpg" alt="Tuberías" class="imagen-componente">
           <h3>Tuberías</h3>
-          <p>Rutas hidráulicas para transportar agua y nutrientes.</p>
+          <p>Rutas hidráulicas de transporte.</p>
         </div>
       </div>
     </div>
-
   </div>
 
   <div id="repositorio" class="tab-content">
@@ -361,7 +416,7 @@
         </div>
         <div class="objetivo-card">
           <h3>Código</h3>
-          <a href="https://docs.google.com/document/d/1vkSWPjEsLRnksdBlvWWDQMIXnjyh2FUQ/edit" target="_blank"><button class="btn-drive">📂 CÓDIGO GOOGLE DRIVE</button></a>
+          <a href="https://docs.google.com/document/d/1vkSWPjEsLRnksdBlvWWDQMIXPostnjyh2FUQ/edit" target="_blank"><button class="btn-drive">📂 CÓDIGO GOOGLE DRIVE</button></a>
         </div>
       </div>
     </div>
@@ -369,8 +424,38 @@
 
   <div id="semestres" class="tab-content">
     <div class="bloque">
-      <h2>Desarrollo</h2>
-      <p>Contenido de semestres aquí...</p>
+      <h2>Documentación por Semestres</h2>
+      <p>Accede a la bandeja de archivos técnicos y reportes de progreso de FERTIOPTA.</p>
+
+      <div class="semestres-container">
+        
+        <div class="bandeja-card">
+          <div>
+            <h3>Cuarto Semestre</h3>
+            <p>Fase inicial de ideación, levantamiento de requerimientos y diseño estructural preliminar del esquema P&ID para el sistema de fertirriego.</p>
+          </div>
+          <a href="https://docs.google.com/document/d/1Pe-Wpo7rpszqyJRYozQNGvc2bEOh7y4j/edit?usp=drive_link&ouid=104431355722246117733&rtpof=true&sd=true" target="_blank">
+            <button class="btn-drive">📂 DOCUMENTO TECNICO 4TO SEMESTRES</button>
+          </a>
+        </div>
+
+        <div class="bandeja-card proximamente">
+          <div>
+            <h3>Quinto Semestre</h3>
+            <p>Montaje del prototipo a escala, cableado del controlador industrial Arduino OPTA y programación base de los algoritmos de conmutación hidráulica.</p>
+          </div>
+          <div class="tag-proximamente">🔒 PRÓXIMAMENTE</div>
+        </div>
+
+        <div class="bandeja-card proximamente">
+          <div>
+            <h3>Sexto Semestre</h3>
+            <p>Pruebas de campo integradas, calibración de tiempos de dosificación de nutrientes, optimización del sistema web y documentación final.</p>
+          </div>
+          <div class="tag-proximamente">🔒 PRÓXIMAMENTE</div>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -379,20 +464,24 @@
       <h2>Modos de Operación</h2>
       <div class="modos-grid-2x2">
         <div class="objetivo-card">
-          <div class="gif-contenedor"><img src="imagenes/OXIGIF.gif"></div>
+          <div class="gif-contenedor"><img src="imagenes/OXIGIF.jpg" alt="Oxigenación"></div>
           <h3>Oxigenación</h3>
+          <p>Recirculación para incrementar niveles de oxígeno disuelto.</p>
         </div>
         <div class="objetivo-card">
-          <div class="gif-contenedor"><img src="imagenes/RIGGIF.gif"></div>
+          <div class="gif-contenedor"><img src="imagenes/RIGGIF.jpg" alt="Riego Regular"></div>
           <h3>Riego Regular</h3>
+          <p>Hidratación convencional directa en las líneas de riego.</p>
         </div>
         <div class="objetivo-card">
-          <div class="gif-contenedor"><img src="imagenes/FERTIGIF.gif"></div>
+          <div class="gif-contenedor"><img src="imagenes/FERTIGIF.jpg" alt="Fertirriego"></div>
           <h3>Fertirriego</h3>
+          <p>Inyección automática de nutrientes en el caudal de agua.</p>
         </div>
         <div class="objetivo-card">
-          <div class="gif-contenedor"><img src="imagenes/LLNGIF.gif"></div>
+          <div class="gif-contenedor"><img src="imagenes/LLNGIF.jpg" alt="Llenado Automático"></div>
           <h3>Llenado Automático</h3>
+          <p>Recuperación del volumen mínimo seguro del tanque.</p>
         </div>
       </div>
 
